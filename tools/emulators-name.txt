@@ -1,0 +1,55 @@
+#EMULATORS
+
+#Azahar - 3DS 
+
+#BigPemu - Atari Jaguar
+
+#Cemu - WiiU
+
+#Citra - 3DS
+
+#Citron - Switch	
+
+#Dolphin - Gamecube - Wii
+
+#Duckstation - PS1
+
+#Flycast - Dreamcast
+
+#lime3ds - 3DS
+
+#m2emulator - Sega Model 2
+
+#MAME
+
+#MelonDS - DS
+
+#mGBA - GBA
+
+#PCSX2 - PS2
+
+#Primehack - Wii Metroid
+
+#PPSSPP - PSP
+
+#Retroarch - Multi system 
+
+#RPCS3 - PS3
+
+#ryujinx - switch 
+
+#Scummvm - Scummvm
+
+#Shadps4 - PS4
+
+#supermodel - SEGA Model 3 
+
+#VITA3k - PSVita
+
+#Xemu - Xbox
+
+#Xenia - Xbox 360 
+
+#yuzu - Switch 
+
+
