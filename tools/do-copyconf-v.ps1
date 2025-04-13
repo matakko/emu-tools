@@ -1,119 +1,75 @@
 # COPY CONF 
 
+    #the synlink userdata maybe needed   
+    #mklink /d "D:\Emulation\Emulators\BigPEmu\config" "C:%APPDATA%\BigPEmu"
+
 $verbose = $true
-$emuPath = "D:\Transfer-Lab"
+$emuPath = "D:\Emulation\Emulators"
 $emuConf = "D:\Emulation\tools\EmuBiosTools\Emu - Tools\Conf"
 
 function Copy-EmuConfig {
     param (
-        [string]$sourceFile
+        [string]$sourceItem
     )
 
-    if (-not (Test-Path $sourceFile)) {
-        if ($verbose) { Write-Host "[INFO] Skipped: '$sourceFile' does not exist." -ForegroundColor Yellow }
+    # Si c’est un dossier avec wildcard
+    if ($sourceItem -like '*`*') {
+        $items = Get-ChildItem -Path $sourceItem -File -Recurse -ErrorAction SilentlyContinue
+    }
+    elseif (Test-Path $sourceItem -PathType Container) {
+        $items = Get-ChildItem -Path $sourceItem -File -Recurse -ErrorAction SilentlyContinue
+    }
+    elseif (Test-Path $sourceItem -PathType Leaf) {
+        $items = @((Get-Item -Path $sourceItem -ErrorAction SilentlyContinue))
+    }
+    else {
+        if ($verbose) { Write-Host "[SKIP] Path not found: $sourceItem" -ForegroundColor Yellow }
         return
     }
 
-    # Construit le chemin relatif depuis emuPath
-    $relativePath = $sourceFile -replace [regex]::Escape("$emuPath\"), ""
+    foreach ($item in $items) {
+        $relativePath = $item.FullName -replace [regex]::Escape("$emuPath\"), ""
+        $destinationPath = Join-Path $emuConf $relativePath
+        $destinationDir = Split-Path $destinationPath -Parent
 
-    # Destination complète
-    $targetFile = Join-Path $emuConf $relativePath
-    $targetFolder = Split-Path $targetFile -Parent
-
-    # Crée le dossier de destination si nécessaire
-    if (-not (Test-Path $targetFolder)) {
-        if ($verbose) { Write-Host "[INFO] Creating target folder: $targetFolder" }
-        New-Item -ItemType Directory -Path $targetFolder -Force | Out-Null
-    }
-
-    # Si le fichier existe déjà, backup
-    if (Test-Path $targetFile) {
-        $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
-        $backupFile = Join-Path "$emuConf\bkp\$relativePath" "$timestamp"
-        $backupFolder = Split-Path $backupFile -Parent
-
-        if (-not (Test-Path $backupFolder)) {
-            New-Item -ItemType Directory -Path $backupFolder -Force | Out-Null
+        # Crée le dossier cible si besoin
+        if (-not (Test-Path $destinationDir)) {
+            if ($verbose) { Write-Host "[INFO] Creating directory: $destinationDir" }
+            New-Item -ItemType Directory -Path $destinationDir -Force | Out-Null
         }
 
-        if ($verbose) {
-            Write-Host "[INFO] Backup existing: $targetFile => $backupFile"
+        # Si un fichier existe déjà à destination, backup
+        if (Test-Path $destinationPath) {
+            $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
+            $backupPath = Join-Path "$emuConf\bkp" $relativePath
+            $backupPath = "$backupPath-$timestamp"
+            $backupDir = Split-Path $backupPath -Parent
+
+            if (-not (Test-Path $backupDir)) {
+                New-Item -ItemType Directory -Path $backupDir -Force | Out-Null
+            }
+
+            if ($verbose) { Write-Host "[BACKUP] $destinationPath => $backupPath" -ForegroundColor Cyan }
+            Move-Item -Path $destinationPath -Destination $backupPath -Force
         }
 
-        Move-Item -Path $targetFile -Destination $backupFile -Force
+        if ($verbose) { Write-Host "[COPY] $($item.FullName) => $destinationPath" -ForegroundColor Green }
+        Copy-Item -Path $item.FullName -Destination $destinationPath -Force
     }
-
-    # Copie du fichier
-    if ($verbose) {
-        Write-Host "[INFO] Copying: $sourceFile => $targetFile"
-    }
-
-    Copy-Item -Path $sourceFile -Destination $targetFile -Force
 }
 
+# Exemple d'utilisation
+$pathsToCopy = @(
+  
+    "$emuPath\azahar\user\config\*"
+	"$emuPath\BigPEmu\config\BigPEmuConfig.bigpcfg"
+	"$emuPath\cemu\settings.xml"
+    "$emuPath\cemu\controllerProfiles\*"
+   
+)
 
-
-	if ($verbose) { Write-Host "`n===== Setting up Emulator Storage =====" -ForegroundColor Magenta }
-
-    Copy-EmuConfig "$emuPath\azahar\user\config\qt-config.ini"
-    Copy-EmuConfig "$emuPath\Sega Model 3 UI -r886\Supermodel.ini"
-    Copy-EmuConfig "$emuPath\Sega Model 3 UI -r886\Config\Supermodel.ini"
-
-    if ($verbose) { Write-Host "Emulator Storage setup complete.`n" -ForegroundColor Green }
-
-
-
-#EMULATORS
-
-#Azahar - 3DS 
-
-#BigPemu - Atari Jaguar
-
-#Cemu - WiiU
-
-#Citra - 3DS
-
-#Citron - Switch	
-
-#Dolphin - Gamecube - Wii
-
-#Duckstation - PS1
-
-#Flycast - Dreamcast
-
-#lime3ds - 3DS
-
-#m2emulator - Sega Model 2
-
-#MAME
-
-#MelonDS - DS
-
-#mGBA - GBA
-
-#PCSX2 - PS2
-
-#Primehack - Wii Metroid
-
-#PPSSPP - PSP
-
-#Retroarch - Multi system 
-
-#RPCS3 - PS3
-
-#ryujinx - switch 
-
-#Scummvm - Scummvm
-
-#Shadps4 - PS4
-
-#supermodel - SEGA Model 3 
-
-#VITA3k - PSVita
-
-#Xemu - Xbox
-
-#Xenia - Xbox 360 
-
-#yuzu - Switch 
+foreach ($p in $pathsToCopy) {
+	if ($verbose) { Write-Host "`n===== Setting up  $p =====" -ForegroundColor Magenta }
+    Copy-EmuConfig $p
+	 if ($verbose) { Write-Host " $p setup complete.`n" -ForegroundColor Green }
+}
