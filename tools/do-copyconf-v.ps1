@@ -58,14 +58,82 @@ function Copy-EmuConfig {
     }
 }
 
-# Exemple d'utilisation
+# EMULATORS
 $pathsToCopy = @(
-  
+#Azahar - 3DS 
     "$emuPath\azahar\user\config\*"
-	"$emuPath\BigPEmu\config\BigPEmuConfig.bigpcfg"
-	"$emuPath\cemu\settings.xml"
+#BigPemu - Atari Jaguar
+    "$emuPath\BigPEmu\config\BigPEmuConfig.bigpcfg"
+#Cemu - WiiU
+    "$emuPath\cemu\settings.xml"
     "$emuPath\cemu\controllerProfiles\*"
-   
+#Citra - 3DS
+    "$emuPath\citra\user\config\*"
+#Citron - Switch	
+    "$emuPath\Citron\user\config\*"
+#Dolphin - Gamecube - Wii
+    "$emuPath\Dolphin-x64\User\Config\*"
+    "$emuPath\Dolphin-x64\Sys\Profiles\*"
+#Duckstation - PS1
+    "$emuPath\duckstation\settings.ini"
+    "$emuPath\duckstation\portable.txt"
+#EmulationStation-DE
+    "$emuPath\EmulationStation-DE\ES-DE\custom_systems\*"
+    "$emuPath\EmulationStation-DE\ES-DE\settings\*"
+#Flycast - Dreamcast
+    "$emuPath\flycast\emu.cfg"
+    "$emuPath\flycast\D3DX9_43.dll"
+#lime3ds - 3DS
+    "$emuPath\lime3ds\user\config\*"
+#m2emulator - Sega Model 2
+    "$emuPath\m2emulator\CFG\*"
+    "$emuPath\m2emulator\NVDATA\*"
+    "$emuPath\m2emulator\scripts\*"
+    "$emuPath\m2emulator\EMULATOR.INI"
+#MAME
+    "$emuPath\mame\mame.ini"
+    "$emuPath\mame\cfg\*"
+#MelonDS - DS
+    "$emuPath\melonDS\melonDS.ini"
+#mGBA - GBA
+    "$emuPath\mGBA\config.ini"
+    "$emuPath\mGBA\qt.ini"
+#PCSX2 - PS2
+    "$emuPath\PCSX2-Qt\inis\*"
+    "$emuPath\PCSX2-Qt\portable.ini"
+#Primehack - Wii Metroid
+    "$emuPath\PrimeHack\User\Config\*"
+    "$emuPath\PrimeHack\portable.txt"
+    "$emuPath\PrimeHack\User\GameSettings\*"
+    "$emuPath\PrimeHack\User\Load\Textures\R3M\*"
+#PPSSPP - PSP
+    "$emuPath\PPSSPP\memstick\PSP\SYSTEM\controls.ini"
+    "$emuPath\PPSSPP\memstick\PSP\SYSTEM\ppsspp.ini"	
+#Retroarch - Multi system 
+    "$emuPath\RetroArch-Win64\autoconfig\*"
+    "$emuPath\RetroArch-Win64\config\*"
+    "$emuPath\RetroArch-Win64\retroarch.cfg"
+#RPCS3 - PS3
+    "$emuPath\RPCS3\config\*"
+#ryujinx - switch 
+    "$emuPath\ryujinx\portable\Config.json"
+#Scummvm - Scummvm
+    "$emuPath\scummvm\scummvm.ini"
+#Shadps4 - PS4
+    "$emuPath\shadPS4\user\config.toml"
+#supermodel - SEGA Model 3 
+    "$emuPath\Supermodel\Config\*"
+#VITA3k - PSVita
+    "$emuPath\Vita3K\config.yml"
+#Xemu - Xbox
+    "$emuPath\xemu\xemu.toml"
+    "$emuPath\xemu\eeprom.bin"	
+#Xenia - Xbox 360 
+    "$emuPath\xenia_canary\xenia.config.toml"
+    "$emuPath\xenia_canary\xenia-canary.config.toml"
+    "$emuPath\xenia_canary\portable.txt"	
+#yuzu - Switch 
+    "$emuPath\yuzu\user\config\*"
 )
 
 foreach ($p in $pathsToCopy) {
