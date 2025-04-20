@@ -1,0 +1,365 @@
+{
+	"exceptionsVersion": 2,
+	"titles": {
+		"emulator_multicpu ${id:3063332750}": {
+			"newTitle": "Model 2 (emulator)",
+			"searchTitle": "${gameid:5316480}",
+			"commandLineArguments": "",
+			"excludeArtwork": false,
+			"exclude": false,
+			"timeStamp": 1744714951092
+		},
+		"Sega Model 3 UI -r886 ${id:2548306155}": {
+			"newTitle": "Supermodel (Emulator)",
+			"searchTitle": "${gameid:5367324}",
+			"commandLineArguments": "",
+			"excludeArtwork": false,
+			"exclude": false,
+			"timeStamp": 1744714889030
+		},
+		"PPSSPPWindows64 ${id:2327684068}": {
+			"newTitle": "PPSSPP (Emulator)",
+			"searchTitle": "${gameid:36515}",
+			"commandLineArguments": "",
+			"excludeArtwork": false,
+			"exclude": false,
+			"timeStamp": 1744714867803
+		},
+		"PPSSPPWindows ${id:2621953185}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776385,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"QtWebEngineProcess ${id:3068350556}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776385,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"nlwav ${id:4120826775}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776381,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"nltool ${id:2277721483}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776378,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"mgba-sdl ${id:3810163466}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776374,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"lime3ds-room ${id:3429288245}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776370,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"ldverify ${id:4282631545}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776366,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"jedutil ${id:4218478306}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776358,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"ldresample ${id:3112258434}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776358,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"floptool ${id:4148133544}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776357,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"imgtool ${id:3026132999}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714776357,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"rpcs3 ${id:2720789297}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717605,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"romcmp ${id:3965807586}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717601,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"Supermodel ${id:4142380195}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717597,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"unidasm ${id:2766033306}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717593,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"unins000 ${id:4185101384}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717589,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"updater ${id:3092837145}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717582,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"Updater ${id:2980512612}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717582,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"updater ${id:3592780616}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717582,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"Updater ${id:4069917620}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714717581,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"yuzu ${id:2780030524}": {
+			"newTitle": "yuzu (Emulator)",
+			"searchTitle": "${gameid:5245878}",
+			"commandLineArguments": "",
+			"excludeArtwork": false,
+			"exclude": false,
+			"timeStamp": 1744714606960
+		},
+		"xenia_canary ${id:3617261496}": {
+			"newTitle": "Xenia (Emulator)",
+			"searchTitle": "${gameid:5245877}",
+			"commandLineArguments": "",
+			"excludeArtwork": false,
+			"exclude": false,
+			"timeStamp": 1744714598530
+		},
+		"DSPTool ${id:2237394694}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455473,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"yuzu-cmd ${id:2506337756}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455473,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"yuzu-room ${id:2586983010}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455473,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"DolphinTool ${id:2883439430}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455469,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"DSPTool ${id:3328896982}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455465,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"citron-cmd ${id:2766774275}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455461,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"ConsoleState ${id:2885429981}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455461,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"DolphinTool ${id:3428055897}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455461,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"citra-room ${id:3700382805}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455457,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"citron-room ${id:4058994105}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455457,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"citra ${id:4294494068}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455456,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"castool ${id:4147663548}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455448,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"chdman ${id:2559777182}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455448,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"azahar-room ${id:3412545378}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744714455446,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"Dolphin ${id:2199784952}": {
+			"newTitle": "Dolphin (Emulator)",
+			"searchTitle": "${gameid:34346}",
+			"commandLineArguments": "",
+			"excludeArtwork": false,
+			"exclude": false,
+			"timeStamp": 1744715138767
+		},
+		"es-pdf-convert ${id:2243849780}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744715351372,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"ES-DE ${id:3902297029}": {
+			"newTitle": "ES-DE (Program)",
+			"searchTitle": "${gameid:5323156}",
+			"commandLineArguments": "",
+			"excludeArtwork": false,
+			"exclude": false,
+			"timeStamp": 1744715379905
+		},
+		"Dolphin ${id:3224309032}": {
+			"newTitle": "PrimeHack",
+			"searchTitle": "${gameid:5260937}",
+			"commandLineArguments": "",
+			"excludeArtwork": false,
+			"exclude": false,
+			"timeStamp": 1744715401788
+		},
+		"fcade-upd ${id:2767706367}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744717511660,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		},
+		"Fightcade1 ${id:2277560428}": {
+			"newTitle": "",
+			"searchTitle": "",
+			"timeStamp": 1744717511661,
+			"commandLineArguments": "",
+			"exclude": true,
+			"excludeArtwork": false
+		}
+	}
+}
