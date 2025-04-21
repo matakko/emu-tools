@@ -19,9 +19,7 @@ else
 	chmod +x $exe
 fi
 
-#run the executable with the params.
-#Fix first '
-param="${@}"
-param=$(echo $param | sed -e 's/^/"/' -e 's/$/"/')
-eval "${exe} -f -g ${param}"
+#fix the invalid rom format given
+${exe} -f -g "$@" >/dev/null 2>&1 &
+
 rm -rf "$savesPath/.gaming"
