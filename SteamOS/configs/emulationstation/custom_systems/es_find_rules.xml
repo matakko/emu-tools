@@ -79,5 +79,9 @@
             <entry>~/Applications/citron*.AppImage</entry>
         </rule>
     </emulator>
-
+    <emulator name="XENIALIN">
+        <rule type="staticpath">
+            <entry>/run/media/deck/SD2T/Emulation/tools/launchers/xenialin.sh</entry>
+        </rule>
+    </emulator>
 </ruleList>
