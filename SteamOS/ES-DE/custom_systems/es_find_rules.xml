@@ -28,6 +28,11 @@
             <entry>/run/media/deck/SD2T/Emulation/tools/launchers/yuzu.sh</entry>
         </rule>
     </emulator>
+    <emulator name="CITRON">
+        <rule type="staticpath">
+            <entry>/run/media/deck/SD2T/Emulation/tools/launchers/citron.sh</entry>
+        </rule>
+    </emulator>
     <emulator name="CEMU">
         <rule type="staticpath">
             <entry>/run/media/deck/SD2T/Emulation/tools/launchers/cemu.sh</entry>
